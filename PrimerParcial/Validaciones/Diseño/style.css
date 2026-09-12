@@ -6,7 +6,7 @@ body{
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
     color: #244c85;
-    background-color: tomato;
+    background-color: #fafafa;
 }
 
 header{
@@ -29,7 +29,7 @@ main{
 footer{
     text-align: center;
     padding: 1rem;
-    color: aqua;
+    color: black;
     font-size: 0.875rem;
 }
 
@@ -59,4 +59,41 @@ footer{
 
 .tarjeta a:hover {
     text-decoration: underline;
+}
+
+.botonRegistro{
+    border-radius: 4px;
+}
+.botonRegistro:hover{
+    background-color: #cc64c9;
+}
+#nombre{
+    background-color: antiquewhite;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#boleta{
+    background-color: antiquewhite;
+    font-family: 'Times New Roman', Times, serif;
+}
+#email{
+    background-color: antiquewhite;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.textoError{
+    display: none;
+    color: red;
+}
+.textoPermitido{
+    display: none;
+    color: green;
+}
+#email:invalid + .textoError{
+    display: block;
+}
+#email:valid + .textoError{
+    display: none;
+}
+
+#email:valid + .textoError + .textoPermitido{
+    display: block;
 }
