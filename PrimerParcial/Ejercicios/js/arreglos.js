@@ -20,7 +20,7 @@ console.log(nombres);
 
 // TODO: filter — crea un arreglo `llenos` con los talleres donde inscritos >= cupo
 
-console.log("Aplicando la función Filter en los talleres")
+console.log("Aplicando la fun cción Filter en los talleres")
 const llenos = talleres.filter((t) => t.inscritos >= t.cupo);
 console.log(llenos.map((t)=> t.nombre))
 

@@ -9,8 +9,8 @@ const talleres = [
 
 
 function pintarTabla(){
-    const tabla = document.getElementById('tabla-talleres');
-    tabla.innerHTML = '';
+    const tbody = document.querySelector('#tabla-talleres tbody');
+    tbody.innerHTML = '';
 
     talleres.forEach((taller) => {
         const fila = document.createElement('tr');
@@ -20,9 +20,8 @@ function pintarTabla(){
             <td>${taller.cupo}</td>
             <td>${taller.inscritos}</td>
         `;
-        tabla.appendChild(fila);
+        tbody.appendChild(fila); 
     });
-
     //debe de obtener la tabla y rellenarla con los datos de talleres
 }
 
