@@ -16,7 +16,7 @@ function pintarTabla(){
         const fila = document.createElement('tr');
         fila.innerHTML = `
             <td>${taller.nombre}</td>
-            <td>${taller.instructor}</td>
+            <td>${taller.instructor}</td> 
             <td>${taller.cupo}</td>
             <td>${taller.inscritos}</td>
         `;

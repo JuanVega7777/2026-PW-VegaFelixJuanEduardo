@@ -1,84 +1,164 @@
 * {
     box-sizing: border-box;
-}
-
-body{
     margin: 0;
-    font-family: 'Courier New', Courier, monospace;
-    color: #244c85;
-    background-color: #fafafa;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-header{
+body {
+    background-color: #f2f4f7;
+    color: #333;
+    padding: 20px;
+}
+
+header {
     background-color: #244c85;
-    color: aliceblue;
-    padding: 1rem;
+    color: white;
     text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
 }
 
-hedear a{
-    color:#ffffff;
+header h1 {
+    margin-bottom: 8px;
 }
 
-main{
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 1rem;
+header p {
+    color: #e5e5e5;
 }
 
-footer{
-    text-align: center;
-    padding: 1rem;
-    color: black;
-    font-size: 0.875rem;
-}
-
-/*Catalogo de Talleres*/
-
-.catalogo{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-}
-
-.tarjeta{
-    background-color: aliceblue;
-    border:1px solid #244c85;
-    border-radius: 0.5rem;
-    padding: 1rem;
-}
-
-.tarjeta h2{
-    margin-top:0 ;
-    font-size: 1.1rem;
-}
-
-.tarjeta a{
+header a {
+    color: white;
     text-decoration: none;
 }
 
-.tarjeta a:hover {
+main a:hover {
     text-decoration: underline;
+    color: rgb(0, 102, 255);
+}
+header a:hover{
+    text-decoration: underline;
+    color: rgb(0, 102, 255);
 }
 
-.botonRegistro{
+
+main {
+    max-width: 900px;
+    margin: auto;
+}
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.tarjeta {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-left: 5px solid #244c85;
+    border-radius: 6px;
+    padding: 18px;
+}
+
+.tarjeta h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.tarjeta h2 a {
+    color: #244c85;
+    text-decoration: none;
+}
+
+.tarjeta p {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+
+.ejercicio,
+.formulario-registro,
+.formulario,
+.info_taller,
+.bitacora {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.ejercicio h2,
+.formulario-registro h1,
+.info_taller h2,
+.bitacora h2 {
+    color: #244c85;
+    margin-bottom: 15px;
+}
+
+
+.campos {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
     border-radius: 4px;
+    font-size: 15px;
 }
-.botonRegistro:hover{
-    background-color: #cc64c9;
+
+button {
+    background-color: #244c85;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
 }
-#nombre{
-    background-color: antiquewhite;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+button:hover {
+    background-color: #1b3a68;
 }
-#boleta{
-    background-color: antiquewhite;
-    font-family: 'Times New Roman', Times, serif;
+
+
+.tabla-scroll {
+    overflow-x: auto;
+    margin: 15px 0;
 }
-#email{
-    background-color: antiquewhite;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+
+#tabla-talleres {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
 }
+
+#tabla-talleres th {
+    background-color: #244c85;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+#tabla-talleres td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#tabla-talleres tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
 .textoError{
     display: none;
     color: red;
@@ -98,197 +178,29 @@ footer{
     display: block;
 }
 
-
-
-/* ==========================================
-   RESET Y ESTILOS GENERALES
-   ========================================== */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+.resultado {
+    display: block;
+    background-color: #333;
+    color: #fff;
+    padding: 12px;
+    border-radius: 4px;
+    margin-top: 15px;
+    min-height: 40px;
+    white-space: pre-wrap;
 }
 
-body {
-    background-color: #f4f6f9;
-    color: #333;
-    line-height: 1.6;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+.bitacora ul {
+    padding-left: 20px;
 }
 
-/* ==========================================
-   HEADER
-   ========================================== */
-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-header h1 {
-    color: #1a365d;
-    font-size: 2rem;
-    font-weight: 700;
-}
-
-/* ==========================================
-   CONTENEDOR PRINCIPAL
-   ========================================== */
-main {
-    width: 100%;
-    max-width: 800px;
-}
-
-.ejercicio {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 24px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-.ejercicio h2 {
-    color: #2b6cb0;
-    font-size: 1.3rem;
+.bitacora li {
     margin-bottom: 8px;
 }
 
-.ejercicio code {
-    background-color: #edf2f7;
-    color: #c53030;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.9em;
-}
 
-.ejercicio p {
-    color: #718096;
-    font-size: 0.95rem;
-    margin-bottom: 16px;
-}
-
-/* ==========================================
-   TABLA CON SCROLL RESPONSIVO
-   ========================================== */
-.tabla-scroll {
-    overflow-x: auto;
-    margin-bottom: 24px;
-    border-radius: 8px;
-    border: 1px solid #e2e8f0;
-}
-
-#tabla-talleres {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #ffffff;
-    text-align: left;
-}
-
-#tabla-talleres th {
-    background-color: #2b6cb0;
-    color: #ffffff;
-    font-weight: 600;
-    padding: 12px 16px;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-#tabla-talleres td {
-    padding: 12px 16px;
-    border-bottom: 1px solid #e2e8f0;
-    color: #4a5568;
-    font-size: 0.95rem;
-}
-
-/* Efecto cebra para las filas */
-#tabla-talleres tbody tr:nth-child(even) {
-    background-color: #f7fafc;
-}
-
-/* Efecto hover */
-#tabla-talleres tbody tr:hover {
-    background-color: #ebf8ff;
-    transition: background-color 0.2s ease;
-}
-
-/* ==========================================
-   FORMULARIO
-   ========================================== */
-.formulario {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-bottom: 20px;
-    background-color: #f8fafc;
-    padding: 16px;
-    border-radius: 8px;
-    border: 1px solid #e2e8f0;
-}
-
-.campos {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.campos label {
-    font-weight: 600;
-    color: #4a5568;
-    font-size: 0.9rem;
-}
-
-select {
-    padding: 10px 12px;
-    border: 1px solid #cbd5e0;
-    border-radius: 6px;
-    background-color: #ffffff;
-    font-size: 0.95rem;
-    color: #2d3748;
-    outline: none;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-select:focus {
-    border-color: #3182ce;
-    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
-}
-
-button[type="submit"] {
-    background-color: #3182ce;
-    color: #ffffff;
-    border: none;
-    padding: 10px 16px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-}
-
-button[type="submit"]:hover {
-    background-color: #2b6cb0;
-}
-
-button[type="submit"]:active {
-    transform: scale(0.98);
-}
-
-/* ==========================================
-   ÁREA DE RESULTADOS
-   ========================================== */
-.resultado {
-    display: block;
-    background-color: #2d3748;
-    color: #63b3ed;
-    font-family: 'Consolas', 'Courier New', monospace;
-    padding: 14px;
-    border-radius: 6px;
-    min-height: 48px;
-    white-space: pre-wrap; /* Mantiene saltos de línea del JS */
-    word-break: break-word;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+footer {
+    text-align: center;
+    color: #666;
+    margin-top: 20px;
 }
