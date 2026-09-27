@@ -216,3 +216,19 @@ footer {
     background-color: #244c85;
     padding: 15px;
 }
+
+.videoGatitos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.videoGatitos video,
+.videoGatitos iframe {
+    max-width: 30%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
