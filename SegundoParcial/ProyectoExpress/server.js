@@ -1,0 +1,26 @@
+const express = require('express');
+
+const app = express();
+
+app.use(express.json());
+//Por lo general ocupan del 3000 al 4000
+const PORT = 4000;
+
+//ejemplo de una peticion por medio de una ruta principal GET
+//envia una peticion a la ruta de:
+app.get('/saludo', (req, res) =>{
+    res.json({mensaje: 'Hola esto es una prueba en GET'});
+});
+
+//el post es que vamos a hacer un cambio, un nuevo registro
+app.post('/eco', (req, res) =>{
+    const{texto} = req.body;
+    if(!texto){
+        return res.status(400).json({error:'El texto es obligatorio'})
+    }
+    res.status(201).json({eco:texto});
+});
+
+app.listen(PORT, ()=>{
+    console.log(`Servidor escuchando en el puerto: ${PORT}`)
+})
