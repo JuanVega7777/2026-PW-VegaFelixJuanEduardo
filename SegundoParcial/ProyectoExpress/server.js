@@ -12,6 +12,10 @@ app.get('/saludo', (req, res) =>{
     res.json({mensaje: 'Hola esto es una prueba en GET'});
 });
 
+app.get("/", (req, res) => {
+    res.json({mensaje: "API de Registro de Asistencia - CECyT 9 funcionando correctamente"})
+})
+
 //el post es que vamos a hacer un cambio, un nuevo registro
 app.post('/eco', (req, res) =>{
     const{texto} = req.body;
@@ -24,3 +28,7 @@ app.post('/eco', (req, res) =>{
 app.listen(PORT, ()=>{
     console.log(`Servidor escuchando en el puerto: ${PORT}`)
 })
+
+
+
+    
