@@ -19,6 +19,7 @@ app.get("/", (req, res) => {
 
 app.get("/api/talleres", talleres.listarTalleres);
 app.get("/api/talleres/:id", talleres.obtenerTaller)
+app.post('/api/talleres', talleres.crearTaller);
 
 //el post es que vamos a hacer un cambio, un nuevo registro
 app.post('/eco', (req, res) =>{
