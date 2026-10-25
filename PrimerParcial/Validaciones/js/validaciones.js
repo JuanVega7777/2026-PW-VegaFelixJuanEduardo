@@ -34,7 +34,7 @@ if(typeof document !== 'undefined'){
         let formularioValido = true;
         for(const campo of Object.keys(patrones)){
             const input = document.getElementById(campo);
-            const errorSpan = document.getElementById(error-${campo});
+            const errorSpan = document.getElementById(`error-${campo}`);
             const esValido = validarCampo(campo, input.value)
             input.classList.toggle('invalido', !esValido)
             errorSpan.textContent = esValido ? '' : mensajes[campo];
