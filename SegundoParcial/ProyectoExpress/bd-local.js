@@ -8,7 +8,7 @@ const mysql = require('mysql12/promise');
 //Se crea el pool para que esto no ocurra, si un usario se conecta se mete al pool
 //En vez de lanzar muchas nuevas conexiones solo se crea una
 const pool = mysql.createPool({
-    host: 'localhost',
+    host: '192.168.20.36',
     port: '3306',
     user: 'root',
     password: 'n0m3l0',
