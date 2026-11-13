@@ -77,3 +77,27 @@ function requireSesion(req, res, next){
   req.session.ultimoUso = Date.now();
   next();
 }
+function requiereRol(rol){
+  return (req, res, next)=>{
+    if(req.session.usuario.rol !== rol){
+      return res.status(403).json({error: `eres ${res.session.usuario.usuario}, pero esta ruta es para ${rol}`});
+    }
+    next();
+  }
+
+  //vamos a definir las rutas de acceso
+  app.get('/api/cpnfig', (req, res)=>{
+    res.json(config);
+  })
+
+  //vamos a crear una ruta para un usuario visitante sin que inicie sesion
+
+  app.post('/api/visita', (req, res) =>{
+    if(!req.session) return res.json({error: 'no tiene acceso'});
+    req.session.visitas = (req.session.visitas || 0) + 1;
+    res.json({visitas: req.session.visitas, session: idCorto(req.sessionID)})
+  })
+
+  //Vamos a autenticarnos
+
+}
